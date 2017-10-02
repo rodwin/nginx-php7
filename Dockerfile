@@ -12,7 +12,6 @@ RUN set -x && \
     libtool \
     make \
     cmake && \
-    tofrodos && \
 
 #Install PHP library
 ## libmcrypt-devel DIY
@@ -150,8 +149,6 @@ RUN chmod +x /start.sh
 
 #Set port
 EXPOSE 80 443
-
-RUN fromdos /start.sh
 
 #Start it
 ENTRYPOINT ["/start.sh"]
